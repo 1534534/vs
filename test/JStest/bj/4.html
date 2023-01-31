@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 
+逻辑非！
+逻辑与&&
+        &&两边都是true才返回true，否则返回false
+        与运算时短路的与，如果左边是flase，则不看右边的值
+        与运算是找false的运算
+    对于非布尔值的运算，会转换为布尔值计算，但最终会返回原值
+        第一个值为true返回第二个值
+        第一个值为false返回第一个值
+逻辑或||
+        或运算也是短路的运算
+        与运算时短路的与，如果左边是true，则不看右边的值
+        或运算是找true的运算
+         对于非布尔值的运算，会转换为布尔值计算，但最终会返回原值
+        第一个值为false返回第二个值
+        第一个值为true返回第一个值
+
+
+关系运算符
+        检查两个值之间的关系是否成立
+        >
+        >=
+        <
+        <=
+        ==相等运算符，比较两个值是否相等
+        ===全等运算符，不会自动进行类型转换，类型不同返回false
+        ！=不等，会自动进行类型转换
+        ！==不全等，不会自动进行类型转换
+    当对非数值进行关系运算时会先将其转换为数值后再比较
+    当关系运算符两边都是字符层时会逐位比较字符的Unicode编码
+        可以利用这个特点对字符串按照字母排序
+    比较字符串格式的数字时要进行格式转换
+
+
+    使用相等运算符比较两个不同类型的值时，会将其转换为相同的类型（通常转换为数值）
+    null和defined相等但不全等
+    NaN不和任何值相等
+*/
+      /* 
+条件运算符
+        语法 ：
+            条件表达式 ？ 表达式1 : 表达式2
+        执行时先对条件表达式进行判断，结果为true执行表达式1，结果为false执行表达式2
+运算符的优先级
+        可以通过优先级表格查看运算符的优先级
+        因为（）拥有最高的优先级，使用运算符时可以通过（）改变优先级
+*/
+      let a = 10;
+      let b = 3;
+      max = a > b ? a : b;
+      console.log(max);
+      //       let a;
+      //       a = true && true;
+      //       console.log(a);
+      //       a = true && false;
+      //       console.log(a);
+      //       a = false && true;
+      //       console.log(a);
+      //       a = false && false;
+      //       console.log(a);
+      //       a = false && false;
+      //       console.log(a);
+      //       a = 1&&NaN
+      //       console.log(a);
+      //       a = NaN&&1
+      //       console.log(a);
+      //       a = 0&&1
+      //       console.log(a);
+
+      //       a = true || true;
+      //       console.log(a);
+      //       a = true || false;
+      //       console.log(a);
+      //       a = false || true;
+      //       console.log(a);
+      //       a = false || false;
+      //       console.log(a);
+      //        a = 1||NaN
+      //       console.log(a);
+      //       a = NaN||1
+      //       console.log(a);
+      //       a = 0||1
+      //       console.log(a);
+      //     a=10
+      //     b = a>5 && a<21
+      //  console.log(b);
+    </script>
+  </head>
+  <body></body>
+</html>

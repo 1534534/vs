@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <style>
+      .clock {
+        margin: 0 auto;
+        height: 500px;
+        width: 500px;
+        border: 5px black solid;
+        border-radius: 50%;
+      }
+      .clock > div {
+        position: absolute;
+        top: -230px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .hour {
+        height: 300px;
+        width: 300px;
+
+        animation: hour 43200s infinite;
+      }
+      .h {
+        margin: 0 auto;
+        height: 200px;
+        background-color: black;
+        width: 12px;
+      }
+      .min {
+        height: 400px;
+        width: 400px;
+
+        animation: hour 3600s infinite;
+      }
+      .m {
+        margin: 0 auto;
+        height: 250px;
+        background-color: black;
+        width: 8px;
+      }
+      .sec {
+        margin: 0 auto;
+        height: 500px;
+        width: 500px;
+
+        animation: hour 60s steps(60) infinite;
+      }
+      .s {
+        vertical-align: middle;
+        margin: auto;
+        height: 250px;
+        background-color: black;
+        width: 2px;
+      }
+
+      @keyframes hour {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="sec"><div class="s"></div></div>
+      <div class="min"><div class="m"></div></div>
+      <div class="hour"><div class="h"></div></div>
+    </div>
+  </body>
+</html>

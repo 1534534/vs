@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+    span{
+      display: inline-block;
+      width: 100px;
+    }
+  </style>
+    <script>
+      /* switch
+        switch语句在执行时，会依次将switch后的表达式和case后的表达式进行全等比较
+            如果比较结果为true，则自当前case处开始执行代码
+            如果结果为false。则继续比较case后的表达式，直到找到true
+            如果所有的比较都是false，则执行default后的语句
+            可以用break避免执行其他代码
+
+循环语句
+    通常编写一个循环要三个条件：
+    1.初始化表达式（初始化变量）
+    2.条件表达式
+    3.更新表单式
+        while循环
+        语句：
+        while(条件表达式)｛
+        语句
+        ｝
+        执行时，对条件表达式进行判断，
+        为true则执行循环体，执行完毕继续判断，如此重复
+        结果为false则循环结束
+
+        do-while循环
+            语法：
+            do{
+                语句
+            }while(条件表达式)
+        do-while循环在执行时会先执行循环体，执行完毕后会对条件表达式进行判断
+
+        while是先判断在执行，do-while是先执行在判断
+        do-while可以确保循环至少执行一次
+
+
+        for循环
+            for循环和while循环没有本质区别，都是反复执行代码
+            不同点是语法结构，for循环更清晰
+        语法：
+            for(初始化表达式；条件表达式；更新表达式){
+                语句
+            }
+            执行流程：1.执行初始化表达式
+                    2.执行条件表达式，判断循环是否执行
+                    3.判断结果为true则执行循环体
+                    4.执行更新表达式，对初始化变量进行修改
+                    5.重复第二步，直到判断为false
+                初始化表达式在整个循环过程中只会执行一次
+            for循环的三个表达式都可以省略
+            使用let在for循环内声明的变量是局部变量，只能在循环内部访问
+            var创建的变量可以再循环的外部访问
+    创建死循环的方式
+    while(1){}
+    for(;;){}
+
+
+*/
+for(let i = 1;i<10;i++){
+  for(let j =1;j<=i;j++){
+    let k = j*i
+     document.write(`<span>${j}*${i}=${k} </span>  `)
+   
+  }
+ document.write('<br>')
+}
+
+
+
+    //    for (let a = 2; a < 1000; a++) {
+    //     let b=0
+    //     for (let i = 2; i <= a**.5; i++) {
+    //       if (a % i == 0) {
+    //         b++
+    //       }
+    //     }
+    //     if (b!=1) {
+    //        // console.log(`${a}不是质数`);
+    //       }
+    //        else{
+    //         console.log(`${a}是质数`);
+    //   }
+    // }
+      //   let b = 0;
+      //   let c = 0;
+      //       for (let a = 100; a < 1000; a++) {
+      //         /* if(((a-a%100)/100)**3+((a%100-a%10)/10)**3+(a%10)**3 ==a){
+      //     console.log(a)
+      // } */
+      //         let str = a + "";
+      //         if (str[0] ** 3 + str[1] ** 3 + str[2] ** 3 === a) {
+      //           console.log(a);
+      //         }
+      //       }
+      //   for (let a = 1; a <= 100; a++) {
+      //     if (a % 3 == 0) {
+      //       b++;
+      //       c += a;
+      //     }
+      //   }
+      //   alert(`个数是${b},总和是${c}`)
+
+      /*      let a = +prompt("请输入。");
+      switch (a) {
+        case 1:
+          alert("一");
+          break;
+        case 2:
+          alert("二");
+          break;
+        case 3:
+          alert("三");
+          break;
+        case 4:
+          alert("四");
+          break;
+        default:
+          alert("不满足");
+      } */
+      //   let b = 0;
+      //   let c = 1000;
+      //   while (c < 5000) {
+      //     c *= 1.05;
+      //     b++;
+      //   }
+      //   alert(`${b},${c}`);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ZH-en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <title>水滴包裹图标</title>
+    <style>
+        *{
+           /* 外边距 */
+            margin: 0;
+            /* 内边距 */
+            padding: 0;
+            background: blue;
+            box-sizing: border-box;
+                
+        }
+        body{
+            display: flex;
+            /* 主轴方向位置 */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #eee;
+
+        }
+        .drop{
+           position: relative;
+           width: 150px;
+           height: 150px;
+           box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),15px 25px 10px rgba(0,0,0,0.05),15px 20px 20px rgba(0,0,0,0.05);
+           /* border-radius 属性允许您为元素添加圆角边框！ */
+           border-radius: 50%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .drop::before{
+            content: '';
+            position:absolute;
+            top: 35px;
+            left: 25px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .drop::after{
+            content: '';
+            position:absolute;
+            top: 25px;
+            left: 50px;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: #fff;
+        }
+        .drop i{
+            font-size: 5em;
+            color: black;
+        }
+        </style>
+</head>
+<body>
+
+
+    
+    <div class="drop"><i class="fa-solid fa-person"></i>
+    <script src="https://kit.fontawesome.com/7aeb1fc180.js" crossorigin="anonymous"></script>
+</body></div>
+</html>

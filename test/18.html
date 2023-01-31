@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <!-- 
+        过渡transition
+        指定属性发生变化时的切换方式
+        transition-property指定要执行过度的属性
+        transition-duration指定要执行过渡的持续时间
+        transition-timing-function过度的时序函数
+        可选值
+            ease慢速开始，先加速，后减速
+            linear匀速运动
+            ease-in加速运动
+            ease-out减速运动
+            ease-in-out先加速后减速
+            cubic-bezier()指定时序函数
+            steps()分步执行过渡效果
+                第二个值：end在时间结束时执行过渡
+                        start在时间开始时执行过渡
+            transition-delay过渡效果的延迟
+    transition可同时设置过渡效果相关的所有属性，持续时间写在延迟时间前面
+
+
+     -->
+    <!-- 动画
+        动画能自动触发动态效果
+        设置动画效果必须要设置关键帧
+    关键帧设置动画执行每一个步骤
+    @keyframes test{
+        from设置动画的开始位置
+                from{
+
+                }
+                   to设置动画的结束位置
+                to{
+                    
+                }
+            }
+        animation-name设置要对当前元素生效的关键帧的名字
+        animation-duration动画的执行时间
+        animation-delay动画的延迟
+        animation-iteration-count动画执行的次数，infinite无限执行
+        animation-direction指定动画执行的方向
+            默认值：normal从from到to执行
+            reverse从to到from执行
+            alternate从from到to执行，重复执行时反向执行
+            alternate从to到from执行，重复执行反向执行
+         animation-play-state设置动画的执行状态
+            可选值running默认值动画执行
+                    paused动画暂停
+        animation-fill-mode动画的填充模式
+            可选值none动画执行完毕元素回到原本位置，
+            forwards动画执行完毕元素会停止在动画结束的位置
+            backwards动画演示等待时，元素会处于开始位置
+            both结合了forwards和backwards
+ -->
+
+    <!-- 变形平移
+        改变元素的形状和位置
+        变形不会影响页面的布局 
+    transform设置元素的变形效果
+transformX沿着x轴平移
+transformY沿着y轴平移
+transformZ沿着z轴平移
+        z轴平移属于立体效果，默认情况下网页不支持透视如果要看见效果就必须perspective设置网页的视距-->
+    <!-- 旋转 使元素沿着x,y,z轴旋转指定的角度
+        rotateX（90deg）
+        rotateY（）
+        rotateZ（）
+        backface-visiblity设置是否显示背面
+     -->
+     
+  </body>
+</html>

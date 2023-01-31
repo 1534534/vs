@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    定位position
+        定位是一种更高级的布局手段，通过定位可以是元素摆放在任何位置
+        position可选值：
+            static默认值，元素是静止的，没有开启定位
+            relative开启元素的相对定位
+            absolutely开启元素的绝对定位
+            fixed开启元素的固定定位
+            sticky开启元素的粘滞定位
+    相对定位的特点
+        相对定位会提高元素的层级
+        不会使元素脱离文档流
+            不设置偏移量元素不会发生任何变化
+    
+    绝对定位absolutely的特点
+        元素的位置不会发生变化
+        元素会从文档流中脱离
+        绝对定位是相对于包含块定位
+        绝对定位的包含块是距离当前元素最近的开启了定位祖先块元素
+        如果所有的祖先元素都没有开启定位则根元素HTML就是包含块
+    固定定位
+        固定定位是一种绝对定位，大部分特点和绝对定位一样
+        唯一的不同点是固定定位永远参照与浏览器的视口进行定位，不会随网页的滚动移动
+    
+    粘滞定位
+            和相对定位的特点基本一样
+            粘滞定位可以在元素到达某个位置时将其固定
+
+    偏移量（offset）
+        由top,right,buttom,left控制
+    
+     -->
+    <!-- 开启了定位的元素可以通过z-index属性来指定元素的层级
+            z-index需要一个整数作为参数，值越大袁殊层级越高，层级越高越优先显示
+            层级一样则优先显示靠下的元素 -->
+            <i class="fas fa-bell"></i>
+  </body>
+</html>

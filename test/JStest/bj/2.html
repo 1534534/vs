@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* js中的原始值一共有七种Number,BigInt,String,Boolen,Null,Undefined,Symbol
+        其中原始值是构成各种数据的基石
+        原始值在js中是不可变类型，一旦创建就不能修改
+        
+        1.数值（number）
+        在js中所有的的整数和浮点数都是number类型
+        js的数值并不是无限大，当属值超过一定范围后会显示近似值
+        Infinity是一个特殊的数值表示无穷
+            NaN是一个特殊的数值，表示非法的数值
+          2.大整数(BigInt)
+          大整数表示一些比较大的整数
+          大整数使用n结尾，可以表示的数字范围是无限大
+        大整数只能和大整数计算
+        其他进制的数字：
+            二进制0b
+            八进制0o
+            十六进制0x
+        typeof 运算符
+        typeof用来检查不同的值的类型
+        */
+      /* 3.字符串string
+
+            在js中使用单引号或双引号来表示字符串
+        转义字符\
+            \"      "
+            \'      '
+            \\      \\
+            \t      制表符
+            \n      换行
+            模板字符串  使用返单引号`来表示模板字符串
+            模板字符串中可以嵌入变量
+        
+
+            4.布尔值boolean
+                布尔值主要用来进行逻辑判断
+                布尔值只用两个值true和false
+            
+            5.空值null
+                空值表示空对象
+                控制只有null
+                使用typeof检查一个控制会返回object
+            6.未定义undefined
+            当声明变量而没有赋值使，它的值就是undefined
+        使用typeof检查一个undefined类型的值使会返回undefined
+            7.符号symbol
+            用来创建一个唯一的标识
+            使用typeof检查一个控制会返回symbol
+
+        */
+
+      /* 类型转换
+        将一种数据类型转换为其他类型（字符串，数值，布尔值）
+        1.转换为字符串
+            调用toString()方法将其他类型转换为字符串
+
+                Null和defined中没有toString（）
+                所以这两个东西调用toString()时会报错
+            调用String()将其他类型转换为字符串
+                原理：对于拥有toString（）方法的值调用String（）函数时，实际上是在调用toString（）方法
+                对于null,则直接转换为'null'
+                对于undefined,则直接转换为'undefined'
+        2.将其他数据类型转换为数值
+            使用Number（）函数转换为数值
+              字符串转换为数值
+                  如果被转换的字符串是一个合法的数字，则会转换为对应的数值
+                  如果字符串不是合法数字，则会转换为NaN
+                  空串或纯空格的字符串则转换为0
+              布尔值转换为数值
+                  true转换为1，false转换为0
+              null转换为0
+              undefined转换为NaN
+              专门用来将字符串转换为数值的两个方法
+              parseInt()将字符串转换为整数，解析时会从左到右读取字符串，直到读取字符串中的所有有效的整数
+                也可以用paeseInt()对数字进行取整
+              parseFloat()将字符串转换为浮点数解析时会从左到右读取字符串，直到读取字符串中的所有有效的小数
+        3.转换为布尔值Boolean
+            使用Boolean（）函数转换为布尔值
+              数字：
+                  0和NaNs转换为false
+                  其余是true
+
+              字符串；
+                空串转换为false
+                其余是true
+              null和undefined都转换为false
+
+        类型转换
+        转换为字符串
+              显式转换String()
+              隐式转换+""
+
+        转换为数值
+              显式转换Number()
+              隐式转换+
+        转换为布尔值
+              显式转换Boolean()
+              隐式转换!!
+
+        */
+      /*       let a = "小一";
+      let b = 1;
+      b = parseFloat(b)
+      console.log(b)
+      let c = 2;
+
+      console.log(typeof b);
+      console.log(typeof c);
+      let str = `你好,${a}`;
+
+      b = b.toString();
+      console.log(typeof b);
+      c = String(c);
+      console.log(typeof c); */
+      let d = 111;
+      console.log(typeof d);
+      d += "";
+      console.log(typeof d);
+      d=+d
+      console.log(typeof d);
+        d=!!d
+      console.log(typeof d);
+    </script>
+  </head>
+  <body></body>
+</html>

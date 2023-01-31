@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 代码块 
+    使用{}来创建代码块，代码块可以对代码进行分组同一个代码块中的代码就是同一种代码
+    理想情况下，一个代码块中的代码要么都执行，要么都不执行
+            let 声明的变量具有块作用域，let声明的变量不能在代码块外部被访问
+            var声明的变量不具有块作用域
+
+    流程控制语句可以控制程序执行的顺序
+条件判断语句
+条件分支语句
+循环语句
+
+if语句
+        if语句只会控制其后的一行代码，编写代码块可以控制多行代码
+if-else语句
+if（）{
+    语句
+}
+else if（）{
+    语句
+}
+else if（）{
+    语句
+}
+else{
+    语句
+}
+
+
+
+if(isNaN(NaN)){
+
+}
+
+*/
+      let a = +prompt("请输入整数");
+      if (isNaN(a) || a % 1 !== 0) {
+       alert('请输入合法的整数')
+      }
+else{
+     if (a % 2 == 0) {
+          alert(`${a}是偶数`);
+        } else {
+          alert(`${a}是奇数`);
+        }
+}
+      let b = prompt("请输入成绩");
+      if(b<0||b>100||isNaN(b)){
+alert('请输入合法分数')
+      }
+      else if (b == 100) {
+        alert("奖励一台BMW");
+      } else if (b >= 80 && b <= 99) {
+        alert("奖励一台iphone");
+      } else if (b >= 60 && b <= 79) {
+        alert("奖励一本参考书");
+      } else if (b < 59) {
+        alert("无");
+      }
+
+      let c = prompt("请输入财产");
+      let h = prompt("请输入身高");
+      let s = prompt("请输入颜值");
+
+      if (h > 180 && s > 500 && c > 1000) {
+        alert("嫁");
+      } else if (h > 180 || s > 500 || c > 1000) {
+        alert("嫁吧");
+      } else {
+        alert("不嫁");
+      }
+    </script>
+  </body>
+</html>

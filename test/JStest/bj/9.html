@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* window对象
+        在浏览器中，浏览器为我们提供了window对象，可以直接访问
+        window代表的是浏览器窗口，可以对浏览器进行各种操作
+        window对象还负责存储JS的内置对象和浏览器的宿主对象
+        window对象可以通过window对象访问，也可以直接访问
+        函数可以认为是window对象的方法
+        向window添加的属性会自动变成全局变量
+        var声明变量不具有块作用域
+        在全局中使用var生命的变量，会作为window对象的属性保存
+        使用function声明的函数都会作为window的方法保存
+        使用let生命的对象不会存储在window对象中而是存储在一个无法访问的地方
+        var没有作用域但有函数作用域 
+  变量的提升
+      使用var生命的变量会在所有代码执行前被声明
+      所以我们可以在变量声明前就访问变量
+  函数的提升
+      使用函数声明创建的的函数，会在其他代码执行前被创建
+      可以在函数声明前调用函数
+      let声明的变量也会提升，但是在赋值之前解释器禁止对该变量的访问
+  
+  立即执行函数（IIFT）
+    在开发中尽量减少直接在全局作用域中编写代码，尽量编写到局部作用域
+    let声明的变量可以使用｛｝来创建块作用域
+    立即执行函数是匿名的函数，只会调用一次
+    可以利用IIFT穿件一次性的函数作用域，，避免变量的冲突
+this
+    函数在执行时，JS解释器每次都会传递一个隐含的this参数
+    this指向的对象会根据函数调用方式的不同而不同
+      以函数属性调用时，this指向window
+      以方法形式调用时，指向调用方法的对象
+    this可以在方法中引用调用方法的对象
+        箭头函数没有自己的this，它的this由外层作用域决定
+        箭头函数的this和调用方式无关
+    */
+    </script>
+  </head>
+  <body></body>
+</html>

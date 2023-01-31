@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        perspective: 800px;
+      }
+      .crud {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+   transform: rotateX(45deg) rotatez(45deg);
+        margin: 100px auto;
+        animation:rot 10s infinite linear;
+      }
+      @keyframes rot {
+        from{
+            transform: rotateX(0) rotateZ(0edg);
+        }
+        to{
+            transform: rotateX(1turn) rotateZ(1turn);
+        }
+      }
+      .crud > div {
+  
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        opacity: 0.7;
+      }
+      img {
+        vertical-align: top;
+        height: 200px;
+        width: 200px;
+      }
+      .box1 {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .box2 {
+        transform: rotateY(-90deg) translatez(100px);
+      }
+      .box3 {
+        transform: rotatex(90deg) translatez(100px);
+      }
+      .box4 {
+        transform: rotatex(-90deg) translatez(100px);
+      }
+      .box5 {
+        transform: rotateX(0deg) translatez(100px);
+      }
+      .box6 {
+        transform: rotateY(180deg) translatez(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="box1"><img src="轮播图/img/1.jpg" /></div>
+      <div class="box2"><img src="轮播图/img/2.jpg" /></div>
+      <div class="box3"><img src="轮播图/img/3.jpg" /></div>
+      <div class="box4"><img src="轮播图/img/4.jpg" /></div>
+      <div class="box5"><img src="轮播图/img/5.jpg" /></div>
+      <div class="box6"><img src="轮播图/img/6.jpg" /></div>
+    </div>
+  </body>
+</html>

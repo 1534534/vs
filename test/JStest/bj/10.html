@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* JS运行代码的模式有两种
+    正常模式
+        默认情况下代码都运行在正常模式下，
+        正常模式下语法检查并不严格
+        原则是能不报错就不报错
+      正常模式下代码的运行性能 
+    严格模式
+        严格模式下语法检查变得严格
+        禁止一些语法
+        更容易报错
+        提升了性能
+    在开发中应该尽可能使用严格模式
+
+面向对象编程（OOP）
+      使用obj创建对象无法区分不同类型的对象，而且不方便批量创建对象
+  JS中可以通过类（class）创建对象
+      类是对象模板，可以将对象中的属性和方法直接定义在类中，定义后可以直接通过类创建对象
+    通过通过同一个类创建的对象称为同类对象
+      可以使用instanceof来检查一个对象是否由某一个类创建
+      如果某个对象是由某个类所创建则称该对象为这个类的实例
+    语法:
+      class 类名 {}类名使用大驼峰命名
+      const 类名 = class{}
+    
+      通过类创建对象
+        new 类（）
+
+类的代码块默认就是严格模式
+类的代码块只能写对象的属性
+*/
+      class Person {
+        name = "小李"; //实例属性只能通过实例访问
+        age = 18; //static test = '静态属性'//使用static声明的属性就是静态属性（类属性）
+        //静态属性只能通过类去访问
+        sayHello() {
+          console.log(1111, this.age); //实例方法，this是当前实例
+        }
+        static test() {
+          console.log("静态方法", this); //静态方法通过类调用，this指向当前类
+        }
+      }
+      class Dog {}
+      const p = new Person(); //调用构造函数创建对象
+      p.sayHello();
+      Person.test();
+      const d = new Dog();
+      console.log(p);
+      console.log(p instanceof Person);
+
+      class People {
+        constructor(name,age,gender) {
+          //特殊的方法构造函数,可以在构造函数中对实例属性赋值，this便是当前所创建的对象
+          console.log("构造函数",name,age,gender);
+          console.log("构造函数",this);
+          this.name = name
+          this.age = age
+          this.gender = gender
+        }
+      }
+
+      const e = new People(1,2,3);
+      const w = new People(4,5,6);
+      const r = new People(7,8,9);
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

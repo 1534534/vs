@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.top {
+  display: flex;
+  position: relative;
+  height: 48px;
+  background-color: black;
+  padding: 0 34px;
+  justify-content: space-between;
+  align-items: center;
+}
+.left {
+  top: 0;
+  left: 1rem;
+}
+.left,
+.right {
+  display: flex;
+  color: aliceblue;
+  font-size: 25px;
+}
+.meitu a {
+  display: block;
+  width: 144px;
+  font-size: 25px;
+  color: #ed15ea;
+}
+.left-f {
+  content: "";
+  height: 2px;
+  width: 5px;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  background-color: aliceblue;
+  transition: all 0.3s;
+}
+.left {
+  top: 10px;
+  height: 30px;
+  width: 30px;
+}
+.left .box {
+  height: 28px;
+  width: 48px;
+}
+.left:hover .box li {
+  position: absolute;
+  transform-origin: left center;
+}
+.left:hover .box li:nth-child(1) {
+  top: 10px;
+  transform: rotateZ(45deg);
+}
+.left:hover .box li:nth-child(2) {
+  display: none;
+}
+.left:hover .box li:nth-child(3) {
+  top: 30px;
+  transform: rotateZ(-45deg);
+}
+.box:hover + .left-nav {
+  height: 210px;
+  box-shadow: 0 0 10px #464444;
+  transition: all 1s;
+}
+.left-nav {
+  position: absolute;
+  top: 47px;
+  left: -1rem;
+  width: 100rem;
+  height: 0;
+  overflow: hidden;
+  color: #d0c7c7;
+  background-color: #3a3c3d;
+}
+.left-nav a {
+  line-height: 30px;
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  color: #c8c2c2;
+  border-bottom: 1px solid #6f6a6a;
+}
+.left-nav a i {
+  margin: 0 10px;
+}
+.left-nav li {
+  height: 30px;
+  padding: 0;
+  margin: 0 25px;
+}
+@media only screen {
+}
+@media only screen and (min-width: 768px) {
+  .left {
+    position: static;
+    top: 0;
+    width: auto;
+    order: 2;
+    height: 48px;
+  }
+  .left .box {
+    display: none;
+  }
+  .left .left-nav {
+    background-color: black;
+    display: flex;
+    height: 48px;
+    width: auto;
+    position: static;
+    justify-content: space-between;
+  }
+  .left .left-nav li {
+    display: block;
+    width: 100px;
+  }
+  .left .left-nav li a {
+    line-height: 48px;
+    border-bottom: none;
+  }
+  .left .left-nav li span {
+    display: none;
+  }
+  .right {
+    order: 3;
+  }
+}

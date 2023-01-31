@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        table{
+            border: spacing 5px;
+            border-collapse: collapse;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 表格table
+            表格分为三个部分
+                头部thead
+                主体tbody
+                底部tfoot
+            th表示头部的单元格
+        tr表示表格中的一行
+        td表示表格中的单元格 
+        rowspan纵向合并
+        colspan横向合并
+    border-spacing指定边框之间的距离
+    border-collapse设置边框的合并
+    默认情况下，元素在td中是垂直居中的
+    入股表格中没有tbody直接使用tr，那么浏览器会自动创建一个tbody，并且将tr全都放到tbody内，
+tr不是table的子元素-->
+        <table border="1" width="50%" align="center">
+            <thead>
+                <th>头</th>
+                <th>头</th>
+                <th>头</th>
+                <th>头</th>
+
+
+            </thead>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <!-- 表单
+            用于提交数据
+        在网页中使用表单来将本地的数据提交到服务器
+        form
+            action属性值为表单要提交数据的地址 
+        disable表单项设置为禁用，数据不会提交
+        readonly表单项设置为只读，数据会提交
+        antocompelete=“off”关闭自动补全
+        -->
+        <form action="./1.html">
+            <input type="text" name="1"><br>
+            
+            <input type="password" name="2">
+            <input type="submit" value='提交'><br>
+           单选按钮 <input type="radio" name="he" value="a">
+            <input type="radio"  name="he" value="b"><br>
+           多选按钮 <input type="checkbox" name="test" value="x">
+            <input type="checkbox" name="test" value="y">
+            <input type="checkbox" name="test" value="z"><br>
+            下拉列表<select name="ha" >
+                <option value="i" selected>默认项</option>
+                <option value="ii">选项a</option>
+                <option value="iii"> 选项b</option>
+            
+            </select><br>
+            <input type="reset">
+            <input type="button" value="按钮">
+        </form>
+  </body>
+</html>

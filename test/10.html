@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        文档流
+        网页时多层的结构，一层叠着一层
+        css可以为每层设置样式，用户只能看见顶层
+        最底下的一层称为文档流，文档流是网页的基础
+        所创建的元素默认都是在文档流中进行排列
+        元素主要有两个状态：在文档流中，不在文档流中（脱离文档流）
+    元素在文档流中的特点：
+        块元素：在页面中独占一行，且自上而下排列
+            默认宽度是父元素的全部
+            默认高度是子元素的全部
+        行内元素：
+            只占自身大小
+            在页面中从左到右排列
+            默认宽度和高度都是子元素的全部
+     -->
+    <!-- 盒模型
+            css将页面中的所有元素都设置为矩形盒子、
+            对页面的布局就是将不同的盒子拜访到不同的位置
+            没一个盒子都由几个部分组成
+            内容区content
+                所有的子元素和文本内容都在内容区中排列
+            内边距padding
+            边框border
+                border-width边框宽度
+                border-color边框颜色
+                border-style边框样式
+                    solid实线
+                    dotted点状虚线
+                    dashed虚线
+                    double双线
+                border：width color style;
+            外边距margin 
+                元素在页面中是按照从左往右排列的
+                默认情况下设置左和上外边距会移动元素自身，而设置右和下外边距会移动其他元素
+                外边距的重叠：同号折叠，异号相加
+            
+        子元素是在父元素的内容区中排列的
+            如果子元素的大小超过了父元素，则子元素会从父元素中溢出
+            overflow属性处理溢出的子元素
+                可选值：
+                    visible(默认值)子元素会从父元素中溢出，在父元素外部的位置显示
+                    hidden  溢出的内容会被裁剪不显示
+                    scroll  生成两个滚动条
+                    auto    根据需要生成滚动条-->
+  </body>
+</html>

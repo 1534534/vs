@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .img-list {
+        width: 500px;
+        height: 400px;
+        position: relative;
+      }
+
+      li {
+        position: absolute;
+        list-style: none;
+      }
+      li:nth-child(1) {
+        z-index: 1;
+      }
+      #box {
+        width: 500px;
+        position: absolute;
+        bottom: -50px;
+        z-index: 10000000;
+      }
+      #box a {
+        margin-left: 14px;
+        float: left;
+     
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: rgba(187, 135, 135, 0.6);
+        /* 是边框和内边距不再有背景颜色 */
+        background-clip: content-box;
+        border: 4px transparent solid;
+      }
+      #box a:hover {
+        border: 4px rgb(241, 241, 245) solid;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="img-list">
+      <li>
+        <a href="javascript:;"><img src="./img/1.jpg" alt="1" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/2.jpg" alt="2" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/3.jpg" alt="3" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/4.jpg" alt="4" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/5.jpg" alt="5" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/6.jpg" alt="5" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/7.jpg" alt="5" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/8.jpg" alt="5" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/9.jpg" alt="5" /></a>
+      </li>
+      <li>
+        <a href="javascript:;"><img src="./img/10.jpg" alt="5" /></a>
+      </li>
+      <div class="last"><i></i></div>
+      <div class="next"><i></i></div>
+      <div id="box">
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+        <a href="javascript:;"></a>
+      </div>
+    </ul>
+  </body>
+
+</html>

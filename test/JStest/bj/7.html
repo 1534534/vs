@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+            break
+                    break用来终止switch和循环语句
+                    break执行后，当前switch或循环会立刻停止
+                    break会终止离他最近的循环
+
+            continue
+                    continue用来跳过当次循环
+            */
+      /*
+                原始值只能表示一些简单的数据
+            对象是js中的一种复合数据类型，相当于一个容器，可以储存各种不同类型的数据
+            d对象中储存的数据称为属性
+            向对象中添加属性
+                    语法： 对象.属性=属性值
+            如果读取的对象没有属性会返回undefined
+            属性名可以是任何值，但还是建议按照标识符的规范命名，特殊的属性值要用中括号[]设置
+            对象的属性值可以是一个对象
+            使用Symbol添加的属性通常是不希望被外界访问的
+            */
+      let obj = new Object();
+      obj.name = "名字";
+      obj.age = 18; //使用.添加的属性不能使用变量作为属性名
+      obj.gender = "男";
+      obj["@@#$$#$##"] = "特殊的属性名";
+      console.log(obj);
+      delete obj.gender;
+      console.log(obj);
+      /*
+            in运算符可以检查对象中是否含有某个属性
+                语法 属性名 in 对象名 */
+/* 对象字面量
+        可以直接使用{}来创建对象,可以直接向对象中添加属性
+        语法：
+        {
+          属性名：属性值，
+          [属性名]：属性值;
+        }
+枚举属性，指将对象中的所有属性全部获取
+for-in语句
+        语法for（let propName in 对象）{
+            语句。。。
+        }
+        for-in 循环会执行多次，有几个对象就执行几次
+        每一次执行都会讲一个属性名赋值给我们所定义的变量
+      并不是所有的属性都能枚举，列如使用符号添加的属性
+
+
+原始值属于不可变值一旦创建无法修改，内存中不会创建重复的原始值
+对象属于可变类型
+对象创完成后，可以任意的添加删除修改对象中的属性
+当对两个对象进行相等或全等时比较的是对象的地址
+当修改一个对象时，所有指向该对象的变量都会受到影响
+而修改变量时只会影响被修改的对象
+
+
+通常情况下，声明存储对象的变量时会使用const
+            */
+      let obj2 = {
+        name: "名字",
+        gender: "男",
+    
+        [Symbol()]: "符号属性",
+      };
+      for (let propName in obj2) {
+        console.log(propName, obj2[propName]);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

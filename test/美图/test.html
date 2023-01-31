@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .top {
+        display: flex;
+        position: relative;
+        height: 48px;
+        background-color: black;
+
+        padding: 0 34px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .left {
+  
+        top: 0;
+        left: 1rem;
+      }
+      .left,
+      .right {
+        color: aliceblue;
+        font-size: 25px;
+      }
+  
+      .meitu {
+      }
+      a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+@media only screen {
+
+  @media (min-width: 768px) {
+    .meitu{
+        order: 1;
+    }
+    .left {
+      order: 2;
+    }
+    .right{
+        order: 3;
+    }
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="top">
+        <div class="left">
+            left
+      </div>
+      <div class="meitu"><a href="javacript:;" >美图手机</a></div>
+      <div class="right">
+        <a href="javacript:;" class="right">right</a>
+      </div>
+  </body>
+</html>

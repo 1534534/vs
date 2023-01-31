@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            面向对象的特点：封装，继承，多态
+
+
+            封装
+              对象就是一个用来存储不同属性的容器
+              直接添加到对象中的属性可以被任意的修改，并不安全
+              封装主要用来保证数据的安全
+
+            如何确保数据的安全：
+                  1私有化数据，将需要保护的数据设置为私有，只在内部适用
+                  2.提供getter和setter方法来开放对数据的操作
+                属性设置私有，使用getter和setter可以控制属性的读写权限，还可以在方法中对属性的值进行验证
+            实现封装的方式：
+            1属性私有化，加#
+            2.通过getter和setter操作属性
+            get 属性名（）｛
+              return this.#属性
+            ｝ 1
+             set 属性名（参数）｛
+              this.#属性 = 参数
+            ｝
+      多态
+            在JS中不会检查参数的类型，所以这就意味着任何数据都可以作为参数传递
+            要调用某个函数，无需指定类型，只要对象满足某些条件即可
+            多态提供了灵活性
+
+继承
+     通过extends关键字来实现继承
+     当一个类继承另一个类时，就相当于将另一个类的代码复制到这个类中
+     被继承的类称为父类，继承的类称为子类
+     继承可以减少重复的代码
+     继承可以在不修改一个类的情况下对其进行扩展
+        OCP开闭原则
+        程序应该对修改关闭，对扩展开放
+
+封装：安全性
+继承：扩展性
+多态：灵活性
+
+                 */
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+        sayHello() {
+          console.log("生物");
+        }
+      }
+      class Dog extends Animal {
+        // constructor(name) {
+        //   this.name = name;
+        // }
+        sayHello() {
+          console.log("狗gou");
+        }
+      }
+      class Person extends Animal {
+        constructor(name) {
+          super(name); // 重写构造函数时，第一行代码必须是super()调用父类的构造函数
+        }
+        sayHello() {
+          super.sayHello();
+        }
+      }
+      const dog = new Dog("狗");
+      const person = new Person("人");
+      console.log(dog);
+      dog.sayHello();
+      function sayHello(obj) {
+        console.log("sayhello", obj.name);
+      }
+        person.sayHello()
+      sayHello(dog);
+      sayHello(person);
+
+      //   class Person {
+      //     #name
+      //     #gender
+      //     #age
+      //     #address = "大道"; //实例使用#开头就变成了私有属性，私有属性只能在类内部被访问
+      //     constructor(name, age, gender) {
+      //       this.#name = name;
+      //       this.#age = age;
+      //       this.#gender = gender;
+      //     }
+      //     sayHello() {
+      //       console.log(this.name);
+      //     }
+      //     get name(){
+      //       console.log('name');
+      //       return this.#name
+      //     }
+      //     set name(name){
+      //       console.log('zhixing');
+      //       this.#name = name
+
+      //     }
+      //   /*   getName(){
+
+      //     }
+      //     setName(){
+
+      //     } */
+      //   }
+      //   const p = new Person("名字", 18, "男");
+      //   console.log(p);
+      //   console.log(p.name);
+      //   p.name = "111"
+      //   console.log(p.name);
+    </script>
+  </body>
+</html>

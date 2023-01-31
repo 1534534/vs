@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* 旧类
+早期JS，中直接通过函数来定义类
+    一个函数直接调用xxx()就是普通函数
+    通过new调用new xxx（）就是构造函数
+      等价于class Person{}
+
+*/
+      // 立即执行函数
+ /*      var Person = (function () {
+        function Person(name, age) {
+          this.age = age;
+          this.name = name;
+        }
+        // 向原型中添加属性或方法
+        Person.prototype.sayHello = function () {
+          console.log(this.name);
+        };
+        // 静态属性
+        Person.staticProperty = "xxx";
+        // 静态方法
+        Person.staticMethod = function () {};
+        return Person;
+      })();
+      const p = new Person("人", "18");
+      console.log(p);
+      console.log(p.sayHello); */
+
+      var Animal = (function () {
+        function Animal() {
+
+        }
+        return Animal;
+      })();
+      var Cat = (function () {
+        function Cat() {
+          
+         
+        }
+        // 使Cat继承Animal
+        Cat.prototype = new Animal();
+           return Cat;
+      })();
+    var cat = new Cat()
+   
+    console.log(cat);
+    </script>
+  </head>
+  <body></body>
+</html>

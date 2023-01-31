@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.top {
+  display: flex;
+  position: relative;
+  height: 48px;
+  background-color: black;
+
+  padding: 0 34px;
+  justify-content: space-between;
+  align-items: center;
+}
+// 顶部两侧图标
+.left {
+  top: 0;
+  left: 1rem;
+}
+.left,
+.right {
+  display: flex;
+  color: aliceblue;
+  font-size: 25px;
+}
+// 顶部中间字样
+.meitu {
+
+  a {
+
+    display: block;
+    width: 144px;
+    font-size: 25px;
+    color: rgb(237, 21, 234);
+  }
+}
+// 顶部栏样式
+.left-f {
+  content: "";
+  height: 2px;
+  width: 5px;
+  margin-bottom: 10px;
+  padding: 0 12px;
+  background-color: aliceblue;
+  transition: all 0.3s;
+}
+.left {
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  .box{
+    height: 28px;
+    width: 48px;
+ 
+  }
+}
+.left:hover {
+  .box li {
+    position: absolute;
+
+    transform-origin: left center;
+  }
+  .box li:nth-child(1) {
+    top: 10px;
+    transform: rotateZ(45deg);
+  }
+  .box li:nth-child(2) {
+    display: none;
+  }
+  .box li:nth-child(3) {
+    top: 30px;
+    transform: rotateZ(-45deg);
+  }
+}
+//下拉列表样式
+.box:hover + .left-nav {
+  height: 210px;
+  box-shadow: 0 0 10px rgb(70, 68, 68);
+  transition: all 1s;
+}
+
+.left-nav {
+  position: absolute;
+  top: 47px;
+  left: -1rem;
+  width: 100rem;
+  height: 0;
+  overflow: hidden;
+  color: rgb(208, 199, 199);
+  background-color: rgb(58, 60, 61);
+  a {
+    line-height: 30px;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    color: rgb(200, 194, 194);
+    border-bottom: 1px solid rgb(111, 106, 106);
+    i {
+      margin: 0 10px;
+    }
+  }
+  li {
+    height: 30px;
+    padding: 0;
+    margin: 0 25px;
+  }
+}
+// 设置媒体查询
+@media only screen {
+  // 断点768
+  @media (min-width: 768px) {
+    .left {
+      position:static;
+      top: 0;
+      width: auto;
+      order: 2;
+      height: 48px;
+      .box {
+        display: none;
+      }
+      .left-nav {
+        background-color: black;
+        display: flex;
+        height: 48px;
+        width:auto;
+        position: static;
+       justify-content: space-between;
+        li {
+          display: block;
+          width: 100px;
+
+          a {
+            line-height: 48px;
+            border-bottom: none;
+          }
+          span{
+            display: none;
+          }
+        }
+      }
+    }
+    .right {
+      order: 3;
+    }
+  }
+}
